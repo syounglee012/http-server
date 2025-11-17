@@ -11,8 +11,10 @@ class HttpHandler(BaseHTTPRequestHandler):
         self.end_headers()
         
         response_data = {
-            "message": "Welcome! This is Sam's web server!",
+            "message": "Redirecting to https://samlee.us",
             "status": "success",
+            "redirect": True,
+            "url": "https://samlee.us",
             "data": {
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 "server": "Python HTTP Server",
